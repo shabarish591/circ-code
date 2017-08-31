@@ -10,10 +10,4 @@ resource "aws_lambda_function" "ngp_automation_switchboard" {
   source_code_hash = "${base64sha256(file("~/ngp_automation_switchboard.zip"))}"
   runtime          = "python2.7",
 	timeout	    = 60,
-	vpc_config {
-       subnet_ids = [
-			 	"subnet-168a7e60",
-			 	"subnet-58b1623c"
-			 ]
-  }
 }
