@@ -5,7 +5,7 @@ jobs:
       # specify the version you desire here
       - image: circleci/python:3.6
 
-    working_directory: ~/repo
+    working_directory: ~/workspace
     
     steps:
       - checkout
@@ -23,5 +23,9 @@ jobs:
             source ~/.bashrc
             terraform -v
             echo "export PATH=$PATH:/usr/local/bin/" >> ~/.bash_profile
+            pwd
+            cd /home/circleci/workspace/pipeline
+            echo "heelo"
+            ./package_lambda.sh ~/workspace
             zip -r ./pipeline/lambda.zip ./switchboard.py
             pushd pipeline && terraform init && terraform plan && terraform apply && popd
