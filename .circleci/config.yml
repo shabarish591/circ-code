@@ -5,7 +5,7 @@ jobs:
       # specify the version you desire here
       - image: circleci/python:3.6
 
-    working_directory: ~/repo
+    working_directory: ~/workspace
     
     steps:
       - checkout
@@ -25,7 +25,8 @@ jobs:
             echo "export PATH=$PATH:/usr/local/bin/" >> ~/.bash_profile
             echo "helo " 
             pwd
-            cd ~/circ-code/.circleci/
+            cd ~/workspace
+            ls -ltra ~/workspace
             echo "heelo"
             ./package_lambda.sh ~/workspace
             zip -r ./pipeline/lambda.zip ./switchboard.py
