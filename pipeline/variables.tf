@@ -1,3 +1,1 @@
-variable "stage" {
-  default = "dev"
-}
+
