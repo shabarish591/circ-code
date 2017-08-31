@@ -19,7 +19,7 @@ resource "aws_lambda_function" "ngp_automation_switchboard" {
   },
 	environment {
     variables = {
-      ENV = ${stage}
+      env = ${stage}
     }
   }
 }
