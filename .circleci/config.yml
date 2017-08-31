@@ -23,10 +23,8 @@ jobs:
             source ~/.bashrc
             terraform -v
             echo "export PATH=$PATH:/usr/local/bin/" >> ~/.bash_profile
-            echo "helo " 
             pwd
-            cd ~/workspace
-            ls -ltra ~/workspace
+            cd /home/circleci/workspace/pipeline
             echo "heelo"
             ./package_lambda.sh ~/workspace
             zip -r ./pipeline/lambda.zip ./switchboard.py
