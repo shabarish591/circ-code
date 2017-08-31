@@ -15,6 +15,5 @@ resource "aws_lambda_function" "ngp_automation_switchboard" {
 			 	"subnet-168a7e60",
 			 	"subnet-58b1623c"
 			 ]
-       security_group_ids = ["sg-ab4c36cc"]
   }
 }
