@@ -1,0 +1,14 @@
+{
+  "dev": {
+    "airflow": {
+      "api_token": "18ABvrha84",
+      "dag_urls": {
+        "silo": "https://auto-tiger-airflow-dev.edf.nikecloud.net/admin/rest_api/api?api=trigger_dag&dag_id=silo_post_dag"
+      }
+    },
+    "aws": {
+      "region": "us-west-2"
+    }
+  },
+  "prod": {}
+}
