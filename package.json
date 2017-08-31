@@ -1,0 +1,12 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "node fuse.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "fuse-box": "^2.0.2"
+  }
+}
