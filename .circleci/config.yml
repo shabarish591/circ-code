@@ -27,5 +27,5 @@ jobs:
             cd /home/circleci/workspace/pipeline
             echo "heelo"
             ./package_lambda.sh ~/workspace
-            zip -r ./pipeline/lambda.zip ./switchboard.py
+            zip -r ~/ngp_automation_switchboard.zip /home/circleci/workspace/pipeline/ /home/circleci/workspace/lambda_functions /home/circleci/workspace/src
             pushd pipeline && terraform init && terraform plan && terraform apply && popd
