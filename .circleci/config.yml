@@ -24,7 +24,7 @@ jobs:
             terraform -v
             echo "export PATH=$PATH:/usr/local/bin/" >> ~/.bash_profile
             pwd
-            cd /home/circleci/workspace/pipeline
+            cd /home/circleci/workspace/.circleci
             echo "heelo"
             ./package_lambda.sh ~/workspace
             zip -r ~/ngp_automation_switchboard.zip /home/circleci/workspace/pipeline/ /home/circleci/workspace/lambda_functions /home/circleci/workspace/src
