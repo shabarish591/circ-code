@@ -23,5 +23,7 @@ jobs:
             source ~/.bashrc
             terraform -v
             echo "export PATH=$PATH:/usr/local/bin/" >> ~/.bash_profile
+            cd $CIRCLE_PROJECT_REPONAME/.circleci/
+            ./package_lambda.sh ~/workspace
             zip -r ./pipeline/lambda.zip ./switchboard.py
             pushd pipeline && terraform init && terraform plan && terraform apply && popd
