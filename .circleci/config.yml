@@ -29,4 +29,4 @@ jobs:
             chmod u+x /home/circleci/workspace/.circleci/package_lambda.sh
             ./package_lambda.sh ~/workspace
             zip -r ~/ngp_automation_switchboard.zip /home/circleci/workspace/pipeline/ /home/circleci/workspace/lambda_functions /home/circleci/workspace/src
-            pushd pipeline && terraform init && terraform plan && terraform apply && popd
+            terraform init && terraform plan && terraform apply && popd
