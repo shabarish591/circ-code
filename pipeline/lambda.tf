@@ -17,9 +17,4 @@ resource "aws_lambda_function" "ngp_automation_switchboard" {
 			 ]
        security_group_ids = ["sg-ab4c36cc"]
   },
-	environment {
-    variables = {
-      env = ${stage}
-    }
-  }
 }
